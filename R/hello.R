@@ -17,6 +17,7 @@ hello <- function() {
   print("Hello, world!")
 }
 
+
 # esim_jakauma_dat <- dat <- data.frame(id=1:7,
 #                                             sukupuoli=c("mies","nainen","nainen","nainen","mies","nainen","mies"))
 # usethis::use_data(esim_jakauma_dat, internal = FALSE)
