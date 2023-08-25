@@ -18,4 +18,4 @@
 #' # prosentit
 #' prop.table(taul)*100
 #' 
-"mydataset"
+"esim_jakauma_dat"
