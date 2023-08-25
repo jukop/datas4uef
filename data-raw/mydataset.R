@@ -4,7 +4,7 @@ esim_jakauma_dat <- data.frame(id=1:7,
                                sukupuoli=c("mies","nainen","nainen","nainen","mies","nainen","mies"))
 
 usethis::use_data(esim_jakauma_dat, overwrite = TRUE)
-sinew::makeOxygen(esim_jakauma_dat, add_fields = "source")
+writeLines(sinew::makeOxygen(esim_jakauma_dat),file("man/esim_jakauma_dat.Rd"))
 
 ## -----
 
@@ -21,7 +21,7 @@ aineistoA_dat$tarpeellisuus <- factor(aineistoA_dat$tarpeellisuus,levels=1:3,lab
 summary(aineistoA_dat)
 
 usethis::use_data(aineistoA_dat, overwrite = TRUE)
-sinew::makeOxygen(aineistoA_dat, add_fields = "source")
+writeLines(sinew::makeOxygen(aineistoA_dat),file("man/aineistoa_dat.Rd"))
 
 # kysely.csv on harkka6ssa
 
@@ -33,7 +33,7 @@ tuntia viikossa arvioit käyttäväsi tämän lisäksi kurssin itsenäiseen opis
 names(kysely_dat) <- c("sukupuoli","itseopiskelu")
 
 usethis::use_data(kysely_dat, overwrite = TRUE)
-sinew::makeOxygen(kysely_dat, add_fields = "source")
+writeLines(sinew::makeOxygen(kysely_dat),file("man/kysely_dat.Rd"))
 
 # # Harj 6 tehtävä 3 ja 4 (3op)
 # library(car) # funktiota "leveneTest" varten
