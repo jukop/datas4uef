@@ -19,10 +19,10 @@ Luentoesimerkki frekvenssijakaumasta
 }
 \examples{
 # frekvenssijakauma
-table(mydataset$sukupuoli)
+table(esim_jakauma_dat$sukupuoli)
 
 # tallennetaan objektiin taul
-taul <- table(mydataset$sukupuoli)
+taul <- table(esim_jakauma_dat$sukupuoli)
 
 # suhteelliset osuudet
 prop.table(taul)
