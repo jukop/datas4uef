@@ -20,6 +20,19 @@
 #' 
 "esim_jakauma_dat"
 
+#' @title hlotsim_dat
+#' @description Keinotekoinen aineisto luentoesimerkkiä varten
+#' @format A data frame with 40 rows and 5 variables:
+#' \describe{
+#'   \item{\code{sukupuoli}}{integer Sukupuoli}
+#'   \item{\code{ikä}}{double Ikä vuosina}
+#'   \item{\code{pituus}}{double Henkilön pituus cm}
+#'   \item{\code{paino}}{double Henkilö paino kg}
+#'   \item{\code{pääaine}}{integer Henkilön pääaine yliopistossa} 
+#'}
+#' @details DETAILS
+"hlotsim_dat"
+
 #' @title aineistoA_dat
 #' @description Harjoitustehtävissä käytettävä aineistoA löytyy tästä.
 #' @format A data frame with 50 rows and 9 variables:
