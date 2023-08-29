@@ -6,6 +6,33 @@ esim_jakauma_dat <- data.frame(id=1:7,
 usethis::use_data(esim_jakauma_dat, overwrite = TRUE)
 #sinew::makeOxygen(esim_jakauma_dat,fileCon)
 
+## ----- 
+
+set.seed(42)
+nsim <- 35
+pmies <- 0.4
+sukup <- rbinom(nsim,1,pmies) # 1 = mies
+ikä <- rpois(nsim,lambda=23.4+sukup*0.8)
+#table(ikä)
+pituus <- round(rnorm(nsim,mean=165+sukup*17,sd=12),0)
+#pituus
+paino <- rnorm(nsim,mean=53+sukup*17+(pituus-mean(pituus))*0.2,sd=3.5)
+pääaine <- as.vector(1:5 %*% rmultinom(nsim+5,size=1,prob=c(0.1,0.1,0.1,0.1,0.1)))
+#table(pääaine)
+# 	TK1K TILTK TTRA2 YM3 TTBiomed2 
+#?rmultinom
+#plot(pituus,paino,col=sukup+1)
+hlotsim_dat <- data.frame(sukupuoli=c(1,1,0,1,0,sukup), #c("mies","mies","nainen","mies","nainen"),
+                          ikä      =c(27,26,23,17,25,ikä),
+                          pituus   =c(194,170,165,170,168,pituus),
+                          paino    =c(80,67,47,61,50,paino),
+                          pääaine  =pääaine)
+hlotsim_dat$sukupuoli <- factor(hlotsim_dat$sukupuoli,levels=0:1,labels=c("nainen","mies"))
+hlotsim_dat$pääaine <- factor(hlotsim_dat$pääaine,levels=1:5,labels=c("TK1K","TILTK","TTRA2","YM3","TTBiomed2"))
+
+usethis::use_data(hlotsim_dat, overwrite = TRUE)
+#sinew::makeOxygen(hlotsim_dat)
+
 ## -----
 
 aineistoA_dat <- read.csv("data-raw/elearn-datat/AineistoA.csv", sep = ";")
