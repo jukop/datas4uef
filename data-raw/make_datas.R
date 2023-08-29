@@ -31,6 +31,7 @@ hlotsim_dat$sukupuoli <- factor(hlotsim_dat$sukupuoli,levels=0:1,labels=c("naine
 hlotsim_dat$pääaine <- factor(hlotsim_dat$pääaine,levels=1:5,labels=c("TK1K","TILTK","TTRA2","YM3","TTBiomed2"))
 
 usethis::use_data(hlotsim_dat, overwrite = TRUE)
+# muutos
 #sinew::makeOxygen(hlotsim_dat)
 
 ## -----
