@@ -84,13 +84,10 @@ usethis::use_data(pcb.data, overwrite = TRUE)
 
 # Monisteen luku 3 esimerkki 3.4 ja 3.5
 # Tallennetaan muuttujaan country tutkimuksessa olleet maat
-country <- c("Australia","Belgia","Tanska","Ranska","Irlanti","Alankomaat","Norja",
-             "Ruotsi","Englanti","Länsi-Saksa","Itävalta","Kanada","Suomi","Islanti",
-             "Uusi-Seelanti","Espanja","Sveitsi","Yhdysvallat")
+country <- c("Australia","Belgia","Tanska","Ranska","Irlanti","Alankomaat","Norja","Ruotsi","Englanti","Länsi-Saksa","Itävalta","Kanada","Suomi","Islanti","Uusi-Seelanti","Espanja","Sveitsi","Yhdysvallat")
 
 # Tallennetaan muuttujaan alko ja death vuotuinen viininkulutus ja sydäntautikuolleisuus
-alko <- c(2.5,2.9,2.9,9.1,0.7,1.8,0.8,1.6,1.3, 2.7,3.9,2.4,0.8, 0.8,1.9, 6.5, 5.8,
-          1.2)
+alko <- c(2.5,2.9,2.9,9.1,0.7,1.8,0.8,1.6,1.3, 2.7,3.9,2.4,0.8, 0.8,1.9, 6.5, 5.8, 1.2)
 death <- c(211,131,220,71,300,167,227,207,285,172,167,191,297,211,266,86,115,199)
 viini_dat <- data.frame(country,alko,death)
 usethis::use_data(viini_dat, overwrite = TRUE)
