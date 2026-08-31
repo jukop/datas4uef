@@ -73,3 +73,20 @@ usethis::use_data(kysely_dat, overwrite = TRUE)
 # # vanha tyyli ratkaista
 # leveneTest(a$k11, factor(a$k1))
 # t.test(a$k11[a$k1==1], a$k11[a$k1==2], paired=F, var.equal=T)
+
+# Monisteen luku 3 esimerkki 3.4 ja 3.5
+# Tallennetaan muuttujaan country tutkimuksessa olleet maat
+country <- c("Australia","Belgia","Tanska","Ranska","Irlanti","Alankomaat","Norja",
+             "Ruotsi","Englanti","Länsi-Saksa","Itävalta","Kanada","Suomi","Islanti",
+             "Uusi-Seelanti","Espanja","Sveitsi","Yhdysvallat")
+
+# Tallennetaan muuttujaan alko ja death vuotuinen viininkulutus ja sydäntautikuolleisuus
+alko <- c(2.5,2.9,2.9,9.1,0.7,1.8,0.8,1.6,1.3, 2.7,3.9,2.4,0.8, 0.8,1.9, 6.5, 5.8,
+          1.2)
+death <- c(211,131,220,71,300,167,227,207,285,172,167,191,297,211,266,86,115,199)
+viini_dat <- data.frame(country,alko,death)
+usethis::use_data(viini_dat, overwrite = TRUE)
+
+# Monisteen luku 3 esimerkki 3.6
+alko_tupakka <- data.frame(alue = c("North", "Yorkshire", "Northeast", "East Midlands", "West Midlands", "East Anglia", "Southeast", "Southwest", "Wales", "Scotland", "Northern Ireland"), alkoholi = c( 6.47, 6.13, 6.19, 4.89, 5.63, 4.52, 5.89, 4.79, 5.27, 6.08, 4.02), tupakkatuotteet = c(4.03, 3.76, 3.77, 3.34, 3.47, 2.92, 3.20, 2.71, 3.53, 4.51, 4.46))
+usethis::use_data(alko_tupakka, overwrite = TRUE)
