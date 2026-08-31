@@ -63,6 +63,14 @@ names(kysely_dat) <- c("sukupuoli","itseopiskelu")
 usethis::use_data(kysely_dat, overwrite = TRUE)
 # sinew::makeOxygen(kysely_dat)
 
+## -----
+v2018 <- c(11.2, 10.4, 10.8, 11.6, 12.5, 10.1, 11.0, 11.2, 12.4, 10.6)
+v2020 <- c(11.5, 12.0, 11.6, 11.8, 10.4, 10.8, 12.2, 11.9, 12.4, 12.6)
+pcb.data <- data.frame(aika = rep(c("2018", "2020"), each = length(v2018)),
+                       pcb = c(v2018,v2020))
+pcb.data$aika <- factor(pcb.data$aika)
+usethis::use_data(pcb.data, overwrite = TRUE)
+
 # # Harj 6 tehtävä 3 ja 4 (3op)
 # library(car) # funktiota "leveneTest" varten
 # levels(kysely$sukupuoli)
@@ -90,3 +98,13 @@ usethis::use_data(viini_dat, overwrite = TRUE)
 # Monisteen luku 3 esimerkki 3.6
 alko_tupakka <- data.frame(alue = c("North", "Yorkshire", "Northeast", "East Midlands", "West Midlands", "East Anglia", "Southeast", "Southwest", "Wales", "Scotland", "Northern Ireland"), alkoholi = c( 6.47, 6.13, 6.19, 4.89, 5.63, 4.52, 5.89, 4.79, 5.27, 6.08, 4.02), tupakkatuotteet = c(4.03, 3.76, 3.77, 3.34, 3.47, 2.92, 3.20, 2.71, 3.53, 4.51, 4.46))
 usethis::use_data(alko_tupakka, overwrite = TRUE)
+
+
+## -----
+# Harjoitus 8 koneet A ja B aineisto pitkässä muodossa
+KoneA <- c(24, 25, 26, 24, 26, 27, 26, 26)
+KoneB <- c(34, 30, 28, 25, 30, 28, 25, 28)
+koneet_dat <- data.frame(mitalinpaino=c(KoneA, KoneB),kone=factor(rep(c("Kone A","Kone B"),times=c(length(KoneA), length(KoneB)))))
+rm(kone,group,KoneA,KoneB)
+usethis::use_data(koneet_dat, overwrite = TRUE)
+#sinew::makeOxygen(koneet_dat,fileCon)
