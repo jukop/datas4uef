@@ -59,3 +59,55 @@
 #'}
 #' @details DETAILS
 "kysely_dat"
+
+#' @title PCB-pitoisuudet vuosina 2018 ja 2020
+#'
+#' @description Esimerkkiaineisto kahden ajankohdan PCB-pitoisuuksista.
+#'
+#' @format A data frame with 20 rows and 2 variables:
+#' \describe{
+#'   \item{\code{aika}}{factor Mittausvuosi: 2018 tai 2020}
+#'   \item{\code{pcb}}{double PCB-pitoisuus}
+#' }
+#'
+"pcb.data"
+
+#' @title Viininkulutus ja sydäntautikuolleisuus
+#'
+#' @description Esimerkkiaineisto viininkulutuksen ja sydäntautikuolleisuuden yhteyden tarkasteluun.
+#'
+#' @format A data frame with 18 rows and 3 variables:
+#' \describe{
+#'   \item{\code{country}}{character Maa}
+#'   \item{\code{alko}}{double Vuotuinen viininkulutus}
+#'   \item{\code{death}}{double Sydäntautikuolleisuus}
+#' }
+#'
+"viini_dat"
+
+
+#' @title Alkoholin ja tupakkatuotteiden kulutus
+#'
+#' @description Esimerkkiaineisto alkoholin ja tupakkatuotteiden kulutuksesta Ison-Britannian alueilla.
+#'
+#' @format A data frame with 11 rows and 3 variables:
+#' \describe{
+#'   \item{\code{alue}}{character Alue}
+#'   \item{\code{alkoholi}}{double Alkoholin kulutus}
+#'   \item{\code{tupakkatuotteet}}{double Tupakkatuotteiden kulutus}
+#' }
+#'
+"alko_tupakka"
+
+
+#' @title Kahden koneen valmistamien mitallien painot
+#'
+#' @description Harjoitusaineisto kahden koneen valmistamien kappaleiden painojen vertailuun.
+#'
+#' @format A data frame with 16 rows and 2 variables:
+#' \describe{
+#'   \item{\code{mitalinpaino}}{double Valmistetun kappaleen paino}
+#'   \item{\code{kone}}{factor Kone A tai Kone B}
+#' }
+#'
+"koneet_dat"

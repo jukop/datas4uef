@@ -6,7 +6,7 @@ esim_jakauma_dat <- data.frame(id=1:7,
 usethis::use_data(esim_jakauma_dat, overwrite = TRUE)
 #sinew::makeOxygen(esim_jakauma_dat,fileCon)
 
-## ----- 
+## -----
 
 set.seed(42)
 nsim <- 35
@@ -19,7 +19,7 @@ pituus <- round(rnorm(nsim,mean=165+sukup*17,sd=12),0)
 paino <- rnorm(nsim,mean=53+sukup*17+(pituus-mean(pituus))*0.2,sd=3.5)
 pääaine <- as.vector(1:5 %*% rmultinom(nsim+5,size=1,prob=c(0.1,0.1,0.1,0.1,0.1)))
 #table(pääaine)
-# 	TK1K TILTK TTRA2 YM3 TTBiomed2 
+# 	TK1K TILTK TTRA2 YM3 TTBiomed2
 #?rmultinom
 #plot(pituus,paino,col=sukup+1)
 hlotsim_dat <- data.frame(sukupuoli=c(1,1,0,1,0,sukup), #c("mies","mies","nainen","mies","nainen"),
@@ -77,7 +77,7 @@ usethis::use_data(pcb.data, overwrite = TRUE)
 # leveneTest(itseopiskelu ~ sukupuoli, data=kysely)
 # t.test(itseopiskelu ~ sukupuoli,data=kysely, paired=F, var.equal=T)
 # aggregate(itseopiskelu ~ sukupuoli,data=kysely,FUN=mean)
-# 
+#
 # # vanha tyyli ratkaista
 # leveneTest(a$k11, factor(a$k1))
 # t.test(a$k11[a$k1==1], a$k11[a$k1==2], paired=F, var.equal=T)
